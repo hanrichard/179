@@ -1,0 +1,39 @@
+.slick-prev, .slick-next {
+  transform: translateY( -150% );
+}
+
+.slick-prev {
+  left: 50px;
+  transform: rotate(135deg);
+}
+
+.slick-next {
+  right: 50px;
+    transform: rotate(315deg);
+}
+
+.slick-arrow {
+  width: 25px;
+  height: 25px;
+  border: solid #ffffff;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 10px;
+  z-index: 1;
+  margin-top: -30px;
+
+  @include breakpoint($mid-up) {
+    width: 50px;
+    height: 50px;
+    margin-top: -30px;
+
+  }
+
+  &:before {
+    color: $white;
+    content: "";
+    display: block;
+    /*background-image: url('../images/svg/am_arrow.svg');*/
+    /*background-repeat: no-repeat;*/
+  }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>179 Hyde</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="HomePage">
+
+
+	<header class="header">
+		{{> home/header }}
+
+		<a href="#home-building" class="header__mid-link"><i class="header__mid-down"></i></a>
+	</header>
+
+
+	<main class="main">
+		<div class="section" id="home-building">
+			<div class="container container--lg container--noPadding">
+				<div class="home__container--top"></div>
+
+				<div class="home__container--mid">
+					<div class="visible-lg visible-md">
+						<img src="src/images/main-hero.jpg" class="home__hero-img">
+					</div>
+					<div class="visible-xs visible-sm">
+						<img src="src/images/main-hero-mobile.jpg" class="home__hero-img">
+					</div>
+				</div>
+				
+				<div class="home__container--mid"></div>
+			</div>
+		</div>
+
+		<div class="section section--white">
+			<div class="container container--xs">
+				<div class="home__container--top">
+					<h2>179 hyde</h2>
+				</div>
+
+				<div class="home__container--mid">
+					<div class="home__video-videoWrapper">
+						<iframe width="854" height="480" src="https://www.youtube.com/embed/RrRgXbHg6kc" frameborder="0"></iframe>
+					</div>
+				</div>
+				
+				<div class="home__container--bottom">
+					
+					<h2>the rarest of <br>opportunities</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="section section--green section--text-revert">
+			<div class="container container--sm">
+				<div class="home__status">
+					<h2 class="home__status-heading" id="Executivesummary">Executive summary</h2>
+					{{> home/homeStatus }}
+				</div>
+
+				{{> home/homeHighlight }}
+			</div>
+		</div>
+
+		<div class="section section--green section--text-revert">
+			<div class="container container--lg container--noPadding">
+
+				<div class="home__container--mid">
+					<img src="src/images/hero-main.jpg" class="home__hero-img">
+				</div>
+			
+			</div>
+		</div>
+
+		<div class="section section--green section--text-revert" id="home-location">
+			<div class="container container--lg">
+				{{> home/homeCards }}
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="container container--lg container--noPadding">
+				
+				{{> home/homeSlider }}
+
+			</div>
+		</div>
+
+
+		<div class="section" id="home-future">
+			<div class="container container--xs">
+				{{> home/homeFeatured }}
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="container container--lg container--noPadding">
+				
+				{{> home/homeSlider-2 }}
+
+			</div>
+		</div>
+
+		<div class="section" id="home-contact">
+			<div class="container container--xs">
+				{{> home/homeContact }}
+			</div>	
+		</div>
+
+	</main>
+
+	<footer class="footer">
+		{{> home/homeModal }}
+	</footer>
+
+	<script src="index.bundle.js"></script>
+
+	</body>
+</html>

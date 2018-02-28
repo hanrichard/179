@@ -1,0 +1,289 @@
+.home{
+	&__hero-img {
+		width: 100%;
+	}
+
+	&__highlights {
+		&-content {
+
+		}
+	}
+
+	&__video {
+		width: 100%;
+
+		&-videoWrapper {
+			position: relative;
+			padding-bottom: 56.25%; /* 16:9 */
+			padding-top: 25px;
+			height: 0;
+
+			iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	&__cards {
+		&-row {
+			margin-bottom: 50px;
+
+	    	@include breakpoint($mid-up) {
+			margin-bottom: 90px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&-video-item {
+			width: 100%;
+		}
+	}
+
+	&__container {
+		&--offset {
+			margin-right: -15px;
+		}
+
+		&--top {
+			text-align: left;
+		}
+
+		&--mid {
+
+		}
+
+		&--bottom {
+			display: flex;
+			justify-content: flex-end;
+			text-align: left;
+		}
+
+		&--mobileBottom {
+			margin-bottom: 50px;
+
+	    	@include breakpoint($mid-up) {
+				margin-bottom: 0;
+			}
+		}
+
+		&-img {
+			width: 100%;
+		}
+
+		&-intro {
+			max-width: 350px;
+			margin-bottom: 50px;
+
+	    	@include breakpoint($mid-up) {
+				margin-bottom: 90px;
+
+	    	}
+
+			&--topGap {
+				margin-top: 50px;
+		    	
+		    	@include breakpoint($mid-up) {
+		    		margin-top: 0
+		    	}
+			}
+
+			&--bottomGap {
+
+		    	@include breakpoint($mid-up) {
+					margin-bottom: 200px;
+		    	}
+			}
+		}
+	}
+
+	&__featured {
+		&-heading {
+			position: relative;
+			margin-bottom: 200px;
+			font-size: 40px;
+			line-height: 1;
+
+	    	@include breakpoint($mid-up) {
+				margin-top: 40px;
+	    	}
+
+			&:after {
+			    content: "";
+			    position: absolute;
+			    top: 0;
+			    border-right: 1px solid #000000;
+			    height: 250px;
+			    transform: skewX(-30deg);
+			    left: 200px;
+
+		    	@include breakpoint($mid-up) {
+		    		left: initial;
+					height: 400px;
+					right: 0;
+					top: -100px;
+		    	}
+			}
+		}
+
+		&-content {
+
+	    	@include breakpoint($mid-up) {
+				margin-top: 120px;
+	    	}
+
+	    	p {
+	    		margin-bottom: 30px;
+	    	}
+
+	    	ul {
+	    		margin: 0;
+	    		padding-left: 20px;
+	    	}
+
+	    	&-info {
+	    		color: $gray;
+	    	}
+		}
+	}
+
+	&__contact {
+		&-logo {
+			margin-bottom: 30px;
+			max-width: 80px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&-heading {
+			margin-bottom: 50px;
+		}
+
+		&-intro {
+			margin-bottom: 50px;
+		}
+
+		&-list {
+			max-width: 700px;
+			margin-bottom: 50px;
+
+		    @include breakpoint($mid-up) {
+				display: flex;	
+		    }
+		}
+
+		&-item {
+			width: 100%;
+			
+		    @include breakpoint($mid-up) {
+				width: 50%;
+		    }
+		}
+
+		&-card {
+			margin-bottom: 30px;
+
+			&-item {
+				display: block;
+				margin-bottom: 10px;
+
+				&--link {
+					color: $black;
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&-footer {
+			&-heading {
+				margin-bottom: 50px;
+  				@include font-GTAmericaExtendedMedium;
+  				text-transform: uppercase;
+			}
+
+			&-disclamer {
+				&-link {
+					color: $gray;
+				}
+			}
+		}
+	}
+
+	&__status {
+		margin-bottom: 70px;
+
+		&-sup {
+			top: -0.25em;
+		}
+
+	    @include breakpoint($mid-up) {
+			margin-bottom: 150px;	    	
+	    }
+
+		&-heading {
+			margin-bottom: 70px;
+
+		    @include breakpoint($mid-up) {
+		 		margin-bottom: 150px;   	
+		    }
+		}
+
+		&-title {
+			color: $gold;
+		}
+
+		&-item {
+			margin-bottom: 50px;
+
+		    @include breakpoint($mid-up) {
+		 		margin-bottom: 80px;   	
+		    }
+		}
+
+		&-title {
+			margin-bottom: 5px;
+		}
+
+		&-info {
+			text-transform: uppercase;
+		}
+
+		&-copy {
+			color: $gray;
+			font-size: 11px;
+			line-height: 2;
+		}
+	}
+}
+
+.modal-header {
+	padding: 30px 30px 0;
+	border-bottom: 0;
+
+    @include breakpoint($mid-up) {
+		padding: 50px 50px 0;
+    }
+}
+
+.modal-title {
+	text-transform: uppercase;
+}
+
+.modal-body {
+	padding: 30px;
+
+    @include breakpoint($mid-up) {
+		padding: 50px;
+    }
+	p {
+		margin-bottom: 30px;
+	}
+}

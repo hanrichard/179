@@ -1,0 +1,25 @@
+@import '~normalize.css';
+@import '~sass-rem';
+@import '~breakpoint-sass/stylesheets/breakpoint';
+@import '~slick-carousel/slick/slick';
+@import '~slick-carousel/slick/slick-theme';
+
+@import 'utils/breakpoint';
+
+@import 'base/font';
+@import 'base/reset';
+@import 'base/color';
+@import 'base/base';
+@import 'base/typography';
+
+@import 'utils/mixins';
+
+@import 'partials/container';
+@import 'partials/accordion';
+@import 'partials/slick-arrows';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'partials/home';
+

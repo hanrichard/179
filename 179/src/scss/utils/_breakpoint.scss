@@ -1,0 +1,19 @@
+// Mobile first breakpoints
+
+$x-sm-up:     (min-width 480px);
+$x-sm-down:   (max-width 479px);
+
+$sm-up:       (min-width 768px);
+$sm-down:     (max-width 767px);
+$sm:          768px 991px;
+
+$mid-up:      (min-width 992px);
+$mid-down:    (max-width 991px);
+$mid:         992px 1199px;
+
+$lrg-up:      (min-width 1200px);
+$lrg-down:    (max-width 1199px);
+$lrg:         1200px 1499px;
+
+$xl-up: 	(min-width 1500px);
+$xl-down: (max-width 1499px);

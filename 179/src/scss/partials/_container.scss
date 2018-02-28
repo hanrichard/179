@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  padding: 60px 15px;
+
+  @include breakpoint($mid-up) {
+    padding: 150px 15px;
+  }
+
+  &--noPadding {
+    padding: 0;
+  }
+
+  &--lg {
+    max-width: 1470px;
+  }
+
+  &--xs {
+    max-width: 870px;
+  }
+
+  &--sm {
+    max-width: 1230px;
+  }
+}
+
+.section {
+	background: $white;
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out;
+  /*transform: translateY(90px);*/
+  transition: opacity .9s .1s, transform .6s ease-in-out;
+
+  &.is-view{
+      opacity: 1;
+      /*transform: translateY(0);*/
+  }
+
+	&--green {
+		background: $green;
+	}
+
+	&--text-revert {
+		h1, h2, h3, h4, p {
+			color: $white;
+		}
+	}
+}

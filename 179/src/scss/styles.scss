@@ -1,0 +1,23 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import '~normalize.css';
+
+@import 'components/button';
+@import 'components/carousel';
+@import 'components/social-icons';
+@import 'components/carousel-card';
+@import 'components/customer-support';
+@import 'components/accordion-menu';
+@import 'components/nav-tabs';
+@import 'components/sub-menu';
+
+@import 'layout/header-search';
+
+@import 'partials/nav/global-mobile';
+@import 'partials/nav/desktop';
+
+@import 'video';
+
+@import 'layout/forms';
+@import 'layout/header';
+@import 'layout/footer';

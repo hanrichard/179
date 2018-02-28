@@ -1,0 +1,49 @@
+h1, .h1-style {
+	@include font-Outside;
+	font-size: 45px;
+	line-height: 40px;
+	margin: 0;
+	text-transform: uppercase;
+    
+    @include breakpoint($mid-up) {
+		font-size: 80px;
+		line-height: 75px;
+    }
+}
+
+h2, .h2-style {
+	@include font-Outside;
+	font-size: 25px;
+	line-height: 25px;
+	margin: 0;
+	text-transform: uppercase;
+    
+    @include breakpoint($mid-up) {
+	font-size: 45px;
+	line-height: 45px;
+    
+    }
+}
+
+h3,  .h3-style {
+	@include font-Outside;
+	font-size: 20px;
+	line-height: 25px;
+	margin: 0;
+    
+    @include breakpoint($mid-up) {
+	font-size: 30px;
+	line-height: 45px;
+    }
+}
+
+h4, .h4-style {
+	font-size: 14px;
+	line-height: 20px;
+	margin: 0;
+    
+    @include breakpoint($mid-up) {
+	font-size: 14px;
+	line-height: 20px;
+    }
+}

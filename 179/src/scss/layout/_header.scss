@@ -1,0 +1,390 @@
+.header {
+	background-color: $green;
+	position: relative;
+
+	@mixin hiddenElement {
+	    opacity: 0;
+	    visibility: hidden;
+	}
+
+	@mixin animationFadeIn {
+		animation: fadeIn 4s ease-in-out;
+  		animation-fill-mode: forwards;  
+	}
+
+	@keyframes fadeIn {
+	  0% {
+	    opacity: 0;
+	    visibility: hidden;
+	  }
+
+	  100% {
+	    opacity: 1;
+	    visibility: visible;
+	  }
+	}
+	
+	&__mid {
+		height: 100vh;
+
+		&-link {
+			position: absolute;
+			left: 20px;
+			bottom: 20px;
+			
+			@include breakpoint($mid-up) {
+				left: 30px;
+				bottom: 30px;
+			}
+
+			&:hover {
+				.header__mid-down {
+					border-color: $gold;
+				}
+			}
+		}
+
+		&-down {
+			border: solid $white;
+			border-width: 0 1px 1px 0;
+			display: inline-block;
+			padding: 10px;
+    		transform: rotate(45deg) skew(10deg, 10deg);
+		}
+
+		&-inner {
+			position: relative;
+			height: 100vh;
+
+
+			@keyframes border {
+			  0% {
+			    background-size: 1px 0%
+			  }
+
+			  100% {
+			    background-size: 1px 100%
+			  }
+			}
+
+
+			&:before {
+				content: "";
+				background: linear-gradient(to bottom, $gold, $gold) no-repeat 0 0;
+				position: absolute;
+				right: 200px;
+    			top: 50px;
+    			bottom: 150px;
+				transform: rotate(215deg);
+				transition: 1s;
+			    background-size: 1px 100%;
+			    width: 1px;
+				animation: border 2s ease-in-out;
+  				animation-fill-mode: forwards;  
+
+  				@include breakpoint($mid-up) {
+					right: 500px;
+					top: 30px;
+					bottom: 40px;
+			    }
+			}
+		}
+
+		&-copy {
+			line-height: 1;
+			color: $white;
+			right: 20px;
+			bottom: 20px;
+			position: absolute;
+			text-transform: uppercase;
+			display: flex;
+		    flex-direction: column;
+    		align-items: flex-end;
+    		@include font-Outside;
+    		@include hiddenElement;
+    		@include animationFadeIn;
+		    
+		    @include breakpoint($mid-up) {
+				right: 60px;
+				bottom: 40px;
+			}
+
+			
+		}
+	}
+
+    &__top {
+		position: fixed;		
+		width: 100%;
+		height: 100px;
+		/*transition: all 0.5s ease-in-out;*/
+		z-index: 2;
+    }
+
+	&__nav {
+		display: flex;
+		width: 100%;
+		padding: 20px;
+	    
+	    @include breakpoint($mid-up) {
+			padding: 30px;
+	    }
+
+	    .affix & {
+			align-items: flex-start;
+			background: $green;
+
+			@include breakpoint($mid-up) {
+				align-items: center;
+				padding: 20px 30px;
+		    }
+		}
+
+		&-toggle {    
+			z-index: 9;
+			width: 30px;
+			height: 15px;
+		    position: relative;
+		    transform: rotate(0deg);
+		    transition: .5s ease-in-out;
+		    cursor: pointer;
+		    margin-left: auto;
+
+		    @include breakpoint($mid-up) {
+		    	display: none;
+		    }
+
+			span {
+			    display: block;
+			    position: absolute;
+			    height: 1px;
+			    width: 100%;
+			    background: $light-gray;
+			    border-radius: 1px;
+			    opacity: 1;
+			    left: 0;
+			    transform: rotate(0deg);
+			    transition: .25s ease-in-out;
+
+			    &:nth-child(1) {
+			      top: 0px;
+			    }
+
+			    &:nth-child(2), &:nth-child(3) {
+			      top: 7.5px;
+			    }
+
+			    &:nth-child(4) {
+			      top: 15px;
+			    }
+			}
+
+			&.open span {
+			    &:nth-child(1) {
+			      top: 18px;
+			      width: 0%;
+			      left: 50%;
+			    }
+
+			    &:nth-child(2) {
+			      transform: rotate(60deg);
+			    }
+
+			    &:nth-child(3) {
+			      transform: rotate(-60deg);
+			    }
+
+			    &:nth-child(4) {
+			      top: 18px;
+			      width: 0%;
+			      left: 50%;
+			    }
+			}
+		}
+
+		&-logo {
+			width: 60px;
+			height: 60px;
+			margin-right: 60px;
+			z-index: 9;
+			transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
+    		@include hiddenElement;
+    		@include animationFadeIn;
+
+    		&--mobile {
+    			display: block;
+			    @include breakpoint($mid-up) {
+			    	display: none;
+			    }
+    		}
+
+    		&--desktop {
+    			display: none;
+			    @include breakpoint($mid-up) {
+			    	display: block;
+			    }
+    		}
+
+			.affix & {
+				margin-top: 0;
+				width: 30px;
+				height: 30px;
+			}
+    
+		    @include breakpoint($mid-up) {
+				width: 166px;
+
+				.affix & {
+					width: 60px;
+					height: 60px;
+				}
+		    }
+		}
+
+		&-menu {
+		    margin-right: auto;
+		    height: 100vh;
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    height: 100vh;
+		    bottom: 0;
+		    top: 0;
+
+
+		    &--mobile {
+		    	display: block;
+		    	visibility: hidden;
+		   		transition: all .5s ease-in-out;
+
+		    	.open & {
+		    		visibility: visible;
+		    	}
+
+		    	@include breakpoint($mid-up) {
+		    		display: none;
+		    	}
+		    }
+
+		    &--desktop {
+		    	display: none;
+
+		    	@include breakpoint($mid-up) {
+		    		display: block;
+		    		@include hiddenElement;
+		    		@include animationFadeIn;
+		    	}
+		    }
+
+		    @include breakpoint($mid-up) {
+		    	position: relative;
+		    	height: auto;
+		    	bottom: initial;
+	    		left: initial;
+	    		top: initial;
+		    }
+
+    		&-inner {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				height: 100vh;
+				transition: background-color 0.5s ease-in-out;;
+
+    			.open & {
+    				background-color: $green;
+    			}
+
+			    @include breakpoint($mid-up) {
+					top: 0;
+					left: 0;
+					bottom: initial;
+					height: auto;
+					right: initial;
+					align-items: baseline;
+					justify-content: flex-start;
+					position: relative;
+			    }
+    		}
+
+    		.open & {
+    			z-index: 0;
+    		}
+
+			&-link {
+				color: $white;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+
+				.active & {
+					color: $gold;
+				}
+			}
+
+			&-items {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+	    		visibility: hidden;
+	    		opacity: 0;
+	    		transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+	    		.open & {
+	    			visibility: visible;
+	    			opacity: 1;
+	    		}
+
+			    @include breakpoint($mid-up) {
+			    	display: flex;
+	    			visibility: visible;
+	    			opacity: 1;
+			    }
+			}
+
+			&-item {
+				position: relative;
+				margin-bottom: 50px;
+				padding-left: 20px;
+
+				&:last-child {
+					margin-bottom: 0;
+
+					&:after {
+				    	@include breakpoint($mid-up) {
+							display: none;
+						}
+					}
+				}
+
+				&:after {
+					content: "";
+					position: absolute;
+					border-right: 1px solid $white;
+					left: 0;
+    				top: -100%;
+   					height: 60px;
+					transform: skewX(-30deg);
+				    
+				    @include breakpoint($mid-up) {
+						right: -22px;
+    					left: initial;
+				    }
+				}
+
+			    @include breakpoint($mid-up) {
+					float: left;
+					margin-right: 45px;
+					padding-left: 0;
+					display: inline-block;
+					margin-bottom: 0;
+			    }
+			}
+		}
+	}
+}
+

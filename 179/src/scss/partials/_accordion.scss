@@ -1,0 +1,133 @@
+.home__highlights {
+  &-heading {
+    margin-bottom: 50px;
+  }
+
+  .panel-heading {
+    border-radius: 0;
+    padding: 20px 0;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  .panel {
+    border-radius: 0;
+    background: transparent;
+    border-top: 1px solid $white;
+  }
+
+  .panel-body {
+    color: $white;
+    padding: 0 0 20px 0;
+    border-top: 0 !important; 
+  }
+  
+  .panel-title-button-icon-wrapper {
+    margin-left: 10px;
+  }
+
+  .panel-title-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+
+    &:hover {
+      color: $white;
+      span {
+        @include font-GTAmericaExtendedMedium;
+      }
+    }
+
+    span {
+      @include font-GTAmericaExtendedMedium;
+    }
+
+    &.collapsed {
+      .panel-title-button-icon--minus {
+        display: block;
+      } 
+      .panel-title-button-icon--plus {
+        display: none;
+      } 
+    }
+  }
+
+  .panel-title a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+
+    &:hover {
+      color: $white;
+      @include font-GTAmericaExtendedMedium;
+    }
+
+    @include font-GTAmericaExtendedMedium;
+
+    &.collapsed {
+      .panel-title-button-icon--minus {
+        display: none;
+      } 
+      .panel-title-button-icon--plus {
+        display: block;
+      } 
+    }
+  }
+
+  .panel-title-button-icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+    &--plus {
+      display: none;
+
+      &:after {
+        content: " ";
+        position: absolute;
+        display: block;
+        background-color: $white;
+        height: 1px;
+        margin-top: -1px;
+        top: 50%;
+        left: 1px;
+        right: 1px;
+        z-index: 9;
+      }
+
+      &:before {
+        content: " ";
+        position: absolute;
+        display: block;
+        background-color: $white;
+        width: 1px;
+        margin-left: -1px;
+        left: 50%;
+        top: 1px;
+        bottom: 1px;
+        z-index: 9;
+      }
+    }
+
+    &--minus {
+      display: block;
+
+      &:after {
+        content: " ";
+        position: absolute;
+        display: block;
+        background-color: $white;
+        height: 1px;
+        margin-top: -1px;
+        top: 50%;
+        left: 1px;
+        right: 1px;
+        z-index: 9;
+      }
+    }
+  }
+}

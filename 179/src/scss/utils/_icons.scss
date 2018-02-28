@@ -1,0 +1,112 @@
+.icn {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &-arrow {
+    width: 30px;
+    height: 57px;
+    background-image: url(../images/svg/cs_arrow.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    &--left {
+      transform: translateX(-50%) translateY(-20px) rotateZ(180deg);
+    }
+  }
+
+  &__car {
+    background-image: url("../images/svg/icon_car.svg");
+  }
+
+  &__star-plus {
+    background-image: url("../images/svg/icon_star.svg");
+  }
+
+  &__phone {
+    background-image: url("../images/svg/icons/phone.svg");
+
+    &--white {
+      background-image: url("../images/svg/icons/phone--white.svg");
+    }
+
+    &--red {
+      background-image: url("../images/svg/icons/phone--red.svg");
+    }
+  }
+
+  &__austraila {
+    background-image: url("../images/svg/australia--grey.svg");
+  }
+
+  &__world-map {
+    background-image: url("../images/svg/world-map--grey.svg");
+  }
+
+  &__headphones {
+    background-image: url("../images/svg/headphones--grey.svg");
+  }
+
+  &__mailbox {
+    background-image: url("../images/svg/mailbox--red.svg");
+  }
+
+  &__mailbox {
+    background-image: url("../images/svg/mailbox--red.svg");
+  }
+
+  &__ticket-star {
+    background-image: url("../images/svg/star-ticket--red.svg");
+  }
+
+  &__at {
+    background-image: url("../images/svg/at--red.svg");
+  }
+
+  &__thumbs-up {
+    background-image: url("../images/svg/thumbs-up--red.svg");
+  }
+
+  &__btn {
+    &-download {
+      width: 2rem;
+      height: 1.8rem;
+      position: relative;
+      top: 4px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+
+      &--red {
+        background-image: url("../images/svg/icon-download.svg");
+      }
+
+      &--white {
+        background-image: url("../images/svg/icon-download--white.svg");
+      }
+    }
+
+    &-order {
+      width: 2rem;
+      height: 1.5rem;
+      position: relative;
+      top: 2px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+
+      &--red {
+        background-image: url("../images/svg/icon-order.svg");
+      }
+
+      &--white {
+        background-image: url("../images/svg/icon-order--white.svg");
+      }
+    }
+  }
+}

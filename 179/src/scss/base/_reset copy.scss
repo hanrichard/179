@@ -1,0 +1,67 @@
+@mixin font-GTAmericaExtendedLight {
+    font-family: "GT America Extended Light", serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@mixin font-GTAmericaExtendedMedium {
+    font-family: "GT America Extended Medium", serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@mixin font-GTAmericaExtendedLightItalic {
+    font-family: "GT America Extended Light Italic", serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin font-Outside {
+    font-family: "Outside", serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outside';
+    /*src: url("../fonts/GT-America/GT-America-Extended-Light.eot");*/
+    src: url("../fonts/Outside/Outside-Regular.woff") format("woff");
+    	 /*url("../fonts/Outside/Outside-Regular") format("truetype");*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'GT America Extended Light';
+    src: url("../fonts/GT-America/GT-America-Extended-Light.eot");
+    src: url("../fonts/GT-America/GT-America-Extended-Light.eot?#iefix") format("embedded-opentype"), 
+    	url("../fonts/GT-America/GT-America-Extended-Light.woff") format("woff"), 
+    	url("../fonts/GT-America/GT-America-Extended-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'GT America Extended Medium';
+    src: url("../fonts/GT-America/GT-America-Extended-Medium.eot");
+    src: url("../fonts/GT-America/GT-America-Extended-Medium.eot?#iefix") format("embedded-opentype"), 
+    	url("../fonts/GT-America/GT-America-Extended-Medium.woff") format("woff"), 
+    	url("../fonts/GT-America/GT-America-Extended-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'GT America Extended Light Italic';
+    src: url("../fonts/GT-America/GT-America-Extended-Light-Italic.eot");
+    src: url("../fonts/GT-America/GT-America-Extended-Light-Italic.eot?#iefix") format("embedded-opentype"), 
+    	url("../fonts/GT-America/GT-America-Extended-Light-Italic.woff") format("woff"), 
+    	url("../fonts/GT-America/GT-America-Extended-Light-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
